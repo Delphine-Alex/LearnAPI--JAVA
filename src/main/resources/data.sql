@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS comments;
  
 CREATE TABLE products (
   id INT AUTO_INCREMENT  PRIMARY KEY,
@@ -11,3 +12,14 @@ INSERT INTO products (name, description, cost) VALUES
   ('iphone', 'smartphone apple', 1000),
   ('ipad', 'tablette apple', 500),
   ('imac', 'ordinateur apple', 2000);
+  
+CREATE TABLE comments (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  content VARCHAR(250) NOT NULL,
+  id_product VARCHAR(250) NOT NULL
+);
+
+INSERT INTO comments (content, id_product) VALUES
+  ('trop cher', 1),
+  ('trop cool ', 5),
+  ('useless', 3);

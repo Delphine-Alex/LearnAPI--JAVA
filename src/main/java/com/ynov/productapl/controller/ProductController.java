@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ynov.productapl.model.Product;
-import com.ynov.productapl.repository.ProductRepository;
 import com.ynov.productapl.service.ProductService;
 
 @RestController
