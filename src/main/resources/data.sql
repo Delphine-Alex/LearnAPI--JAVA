@@ -12,40 +12,38 @@ INSERT INTO products (name, description, cost) VALUES
   ('iphone', 'smartphone apple', 1000),
   ('ipad', 'tablette apple', 500),
   ('imac', 'ordinateur apple', 2000);
-  
-CREATE TABLE comments (
+
+ CREATE TABLE comments (
   id INT AUTO_INCREMENT  PRIMARY KEY,
   content VARCHAR(250) NOT NULL,
-  id_product VARCHAR(250)
+  id_product INT(250) 
 );
 
 INSERT INTO comments (content, id_product) VALUES
-  ('trop cher', 1),
-  ('trop cool ', 1),
-  ('useless', 3);
-  
+  ('trop cool',1),
+  ('trop nul',3),
+  ('excellent',3);
+
 CREATE TABLE categories (
-  category_id INT AUTO_INCREMENT PRIMARY KEY,
+  id_category INT AUTO_INCREMENT  PRIMARY KEY,
   name VARCHAR(250) NOT NULL
 );
 
 INSERT INTO categories (name) VALUES
-	('smartphone'),
-	('tablette'),
-	('ordinateur'),
-	('apple');
-	
+  ('smart phone'),
+  ('tablette'),
+  ('ordinateur'),
+  ('apple');
+  
 CREATE TABLE category_product (
-	category_id INT NOT MULL,
-	product_id INT NOT MULL,
+  id_category INT NOT NULL,
+  id_product INT NOT NULL
 );
 
-INSERT INTO category_product (category_is, product_id) VALUES
-	(1,1),
-	(2,2),
-	(3,3),
-	(4,1),
-	(4,2),
-	(4,3);
-	
-	
+INSERT INTO category_product (id_category, id_product) VALUES
+  (1,1),
+  (2,2),
+  (3,3),
+  (4,1),
+  (4,2),
+  (4,3);
