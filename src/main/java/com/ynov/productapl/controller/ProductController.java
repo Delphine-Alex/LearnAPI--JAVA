@@ -95,4 +95,5 @@ public class ProductController {
 	public Iterable<Product> getProductsByName(@PathVariable("name") String name) {
 		return productService.getProductsByname(name);
 	}
+	
 }
